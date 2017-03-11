@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 根据 info.plist 版本号判断是否需要显示引导图
     if ([ZHKGuideView needShowGuide]) {
         ZHKGuideView *guideView = [ZHKGuideView guideViewWithImageNames:@[@"guide_image_01", @"guide_image_02", @"guide_image_03", @"guide_image_04"]];
         [guideView showGuideViewOnTargetController:self.navigationController];

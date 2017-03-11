@@ -56,7 +56,7 @@
 }
 
 /**
- build guideView content
+ 创建引导内容
  */
 - (void)buildContent {
     if (_imageNames.count == 0) {
@@ -72,15 +72,13 @@
     }
     
     [self addSubview:self.pageControl];
-    
-    NSLog(@"%@", NSStringFromCGRect(_pageControl.frame));
 }
 
 /**
- create imageView
-
- @param imageName guide image name
- @param index The index of guide image
+ 创建 imageView
+ 
+ @param imageName  引导图图片名字
+ @param index 引导图索引
  @return  imageView
  */
 - (UIImageView *)imageViewWithImageName:(NSString *)imageName index:(NSInteger)index {
@@ -124,8 +122,6 @@
         _pageControl.numberOfPages = _imageNames.count;
         _pageControl.center = CGPointMake(SCREEN_SIZE.width / 2, SCREEN_SIZE.height - PAGECONTROL_MARGIN_BOTTOM);
         [_pageControl addTarget:self action:@selector(pageControlAction:) forControlEvents:UIControlEventValueChanged];
-//        _pageControl.tintColor = [UIColor darkGrayColor];
-//        _pageControl.backgroundColor = [UIColor blueColor];
     }
     return _pageControl;
 }

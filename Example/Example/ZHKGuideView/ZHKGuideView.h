@@ -11,25 +11,25 @@
 @interface ZHKGuideView : UIView
 
 /**
- Show GuideView
+  显示 GuideView
 
- @param controller The Controller which to show GuideView
+ @param controller GuideView 的载体 ViewController
  */
 - (void)showGuideViewOnTargetController:(UIViewController *)controller;
 
 /**
- Create GuideView
+ 创建引导图
  
- @param imageNames Guide image's name
+ @param imageNames 引导图图片名称
  @return guideView
  */
 + (instancetype)guideViewWithImageNames:(NSArray <NSString *>*)imageNames;
 
 
 /**
- Need show GuideView
+ 是否需要显示引导图
 
- @return Result: YES = need, NO = no need
+ @return YES = 需要, NO = 不需要
  */
 + (BOOL)needShowGuide;
 
