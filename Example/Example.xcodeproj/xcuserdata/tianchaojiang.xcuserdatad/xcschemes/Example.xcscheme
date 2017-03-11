@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2450981D1E73CB2700F27D97"
-               BuildableName = "GuideView.app"
-               BlueprintName = "GuideView"
-               ReferencedContainer = "container:GuideView.xcodeproj">
+               BlueprintIdentifier = "2450985F1E73E2CB00F27D97"
+               BuildableName = "Example.app"
+               BlueprintName = "Example"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "245098361E73CB2700F27D97"
-               BuildableName = "GuideViewTests.xctest"
-               BlueprintName = "GuideViewTests"
-               ReferencedContainer = "container:GuideView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "245098411E73CB2700F27D97"
-               BuildableName = "GuideViewUITests.xctest"
-               BlueprintName = "GuideViewUITests"
-               ReferencedContainer = "container:GuideView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2450981D1E73CB2700F27D97"
-            BuildableName = "GuideView.app"
-            BlueprintName = "GuideView"
-            ReferencedContainer = "container:GuideView.xcodeproj">
+            BlueprintIdentifier = "2450985F1E73E2CB00F27D97"
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2450981D1E73CB2700F27D97"
-            BuildableName = "GuideView.app"
-            BlueprintName = "GuideView"
-            ReferencedContainer = "container:GuideView.xcodeproj">
+            BlueprintIdentifier = "2450985F1E73E2CB00F27D97"
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2450981D1E73CB2700F27D97"
-            BuildableName = "GuideView.app"
-            BlueprintName = "GuideView"
-            ReferencedContainer = "container:GuideView.xcodeproj">
+            BlueprintIdentifier = "2450985F1E73E2CB00F27D97"
+            BuildableName = "Example.app"
+            BlueprintName = "Example"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

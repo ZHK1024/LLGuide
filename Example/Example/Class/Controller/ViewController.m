@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  GuideView
+//  Example
 //
 //  Created by ZHK on 2017/3/11.
 //  Copyright © 2017年 Weiyu. All rights reserved.
@@ -18,11 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (![ZHKGuideView needShowGuide]) {
+    if ([ZHKGuideView needShowGuide]) {
         ZHKGuideView *guideView = [ZHKGuideView guideViewWithImageNames:@[@"guide_image_01", @"guide_image_02", @"guide_image_03", @"guide_image_04"]];
         [guideView showGuideViewOnTargetController:self.navigationController];
     }
-    
 }
 
 

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  GuideView
+//  Example
 //
 //  Created by ZHK on 2017/3/11.
 //  Copyright © 2017年 Weiyu. All rights reserved.
@@ -17,9 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    NSLog(@"rootViewController = %@", [UIApplication sharedApplication].keyWindow.rootViewController);
-    
     return YES;
 }
 
