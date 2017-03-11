@@ -11,8 +11,8 @@
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
-#define VERSION_KEY @"APP_VERSION"
-#define PAGECONTROL_MARGIN_BOTTOM 60.0
+#define VERSION_KEY @"APP_VERSION"      // 记录版本号的 key
+#define PAGECONTROL_MARGIN_BOTTOM 60.0  // pageControl 屏幕底边距
 
 @interface ZHKGuideView () <UIScrollViewDelegate>
 
@@ -51,6 +51,11 @@
 
 #pragma mark -
 
+/**
+ 在 Target viewController 主视图上显示引导图
+ 
+ @param controller 显示主视图的 vc
+ */
 - (void)showGuideViewOnTargetController:(UIViewController *)controller {
     [controller.view addSubview:self];
 }

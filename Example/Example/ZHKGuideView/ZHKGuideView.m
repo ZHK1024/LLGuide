@@ -11,8 +11,10 @@
 #define SCREEN_BOUNDS [UIScreen mainScreen].bounds
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
-#define VERSION_KEY @"APP_VERSION"
-#define PAGECONTROL_MARGIN_BOTTOM 60.0
+#define VERSION_KEY @"APP_VERSION"      // 记录版本号的 key
+#define PAGECONTROL_MARGIN_BOTTOM 60.0  // pageControl 屏幕底边距
+#define PAGECONTROL_WIDTH [UIScreen mainScreen].bounds.size.width   // pageController 宽度
+#define PAGECONTROL_HEIGHT 20.0 // pageControl 高度
 
 @interface ZHKGuideView () <UIScrollViewDelegate>
 
@@ -51,6 +53,11 @@
 
 #pragma mark -
 
+/**
+ 在 Target viewController 主视图上显示引导图
+
+ @param controller 显示主视图的 vc
+ */
 - (void)showGuideViewOnTargetController:(UIViewController *)controller {
     [controller.view addSubview:self];
 }
@@ -118,7 +125,7 @@
 
 - (UIPageControl *)pageControl {
     if (_pageControl == nil) {
-        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_SIZE.width, 20.0)];
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, PAGECONTROL_WIDTH, PAGECONTROL_HEIGHT)];
         _pageControl.numberOfPages = _imageNames.count;
         _pageControl.center = CGPointMake(SCREEN_SIZE.width / 2, SCREEN_SIZE.height - PAGECONTROL_MARGIN_BOTTOM);
         [_pageControl addTarget:self action:@selector(pageControlAction:) forControlEvents:UIControlEventValueChanged];
