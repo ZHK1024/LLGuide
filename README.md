@@ -21,6 +21,32 @@ pod 'LLGuide', :git => 'https://github.com/ZHK1024/LLGuide.git'
 pod 'LLGuide', :git => 'https://github.com/ZHK1024/LLGuide.git', :tag => s.version.to_s
 ```
 
+## Usage
+
+```
+/// UIImage
+LLGuide.config(version: "3") { () -> [UIImage] in
+    ["guide_image_01",
+     "guide_image_02",
+     "guide_image_03",
+     "guide_image_04"
+    ].compactMap {
+        UIImage(named: $0)
+    }
+}
+
+/// UIViewController
+LLGuide.config(version: "1") { () -> [UIViewController] in
+    [UIColor.systemRed,
+     UIColor.systemGreen,
+     UIColor.systemBlue,
+     UIColor.systemTeal
+    ].map {
+        GuideViewController(backgroundColor: $0)
+    }
+}
+```
+
 ## Author
 
 ZHK1024, ZHK1024@qq.com
