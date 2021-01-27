@@ -1,5 +1,4 @@
 import XCTest
-import LLGuide
 
 class Tests: XCTestCase {
     

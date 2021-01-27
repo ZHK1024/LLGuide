@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LLGuide
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        LLGuide.skipTextColor = .systemRed
+        LLGuide.config { () -> [UIImage] in
+            ["guide_image_01", "guide_image_02", "guide_image_03", "guide_image_04"].compactMap {
+                UIImage(named: $0)
+            }
+        }
+        
         return true
     }
 
