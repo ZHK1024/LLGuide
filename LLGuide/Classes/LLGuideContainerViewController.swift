@@ -40,9 +40,7 @@ class LLGuideContainerViewController: UIPageViewController {
     func setupUI() {
         view.backgroundColor = .white
         dataSource = self
-        
         view.addSubview(skipButton)
-//        v
     }
     
     override func viewDidLayoutSubviews() {
@@ -76,7 +74,7 @@ class LLGuideContainerViewController: UIPageViewController {
 extension LLGuideContainerViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = pageControllers.index(of: viewController),
+        guard let index = pageControllers.firstIndex(of: viewController),
               index != 0, index != NSNotFound else {
             return nil
         }
@@ -84,7 +82,7 @@ extension LLGuideContainerViewController: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = pageControllers.index(of: viewController),
+        guard let index = pageControllers.firstIndex(of: viewController),
               index != pageControllers.count - 1, index != NSNotFound else {
             return nil
         }
