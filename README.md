@@ -23,7 +23,7 @@ pod 'LLGuide', :git => 'https://github.com/ZHK1024/LLGuide.git', :tag => s.versi
 
 ## Usage
 
-```
+```swift
 /// UIImage
 LLGuide.config(version: "3") { () -> [UIImage] in
     ["guide_image_01",
