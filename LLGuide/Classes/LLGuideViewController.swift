@@ -15,7 +15,6 @@ class LLGuideViewController: UIViewController {
     init(image: UIImage) {
         super.init(nibName: nil, bundle: nil)
         imageView.image = image
-        print(image)
     }
     
     required init?(coder: NSCoder) {
@@ -25,6 +24,7 @@ class LLGuideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
+        imageView.contentMode = LLGuide.contentModel
     }
     
     override func viewDidLayoutSubviews() {

@@ -22,6 +22,9 @@ open class LLGuide {
     /// 跳过按钮右上对齐便宜量
     public static var skipRightOffst = CGPoint(x: -20.0, y: 10.0)
     
+    /// 图片 UIImageView 图片缩放模式 (仅仅使用 UIImage 时候生效)
+    public static var contentModel: UIViewContentMode = .scaleAspectFill
+    
     /// 版本字段 key
     private static let kVersionKey = "6E13295654476C83"
     
