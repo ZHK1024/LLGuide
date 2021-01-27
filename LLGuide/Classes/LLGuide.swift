@@ -23,7 +23,7 @@ open class LLGuide {
     public static var skipRightOffst = CGPoint(x: -20.0, y: 10.0)
     
     /// 图片 UIImageView 图片缩放模式 (仅仅使用 UIImage 时候生效)
-    public static var contentModel: UIViewContentMode = .scaleAspectFill
+    public static var contentModel: UIView.ContentMode = .scaleAspectFill
     
     /// 版本字段 key
     private static let kVersionKey = "6E13295654476C83"
@@ -33,7 +33,7 @@ open class LLGuide {
     ///   - version:     当前版本号 (不传表示每次启动都显示, version 变化后仅在每次更新版本后第一次启动时展示)
     ///   - windowLevel: Window 展示优先级, 默认为 10
     ///   - images:      UIImage 对象数组
-    public static func config(version: String? = nil, windowLevel: Int = 10, images: () -> [UIImage]) {
+    public static func config(version: String? = nil, windowLevel: CGFloat = 10, images: () -> [UIImage]) {
         guard shouldDisplay(version: version) else { return }
         let controllers = images().map { LLGuideViewController(image: $0) }
         guard controllers.count > 0 else { return }
@@ -45,7 +45,7 @@ open class LLGuide {
     ///   - version:     当前版本号 (不传表示每次启动都显示, version 变化后仅在每次更新版本后第一次启动时展示)
     ///   - windowLevel: Window 展示优先级, 默认为 10
     ///   - controllers: 控制器数组
-    public static func config(version: String? = nil, windowLevel: Int = 10, controllers: () -> [UIViewController]) {
+    public static func config(version: String? = nil, windowLevel: CGFloat = 10, controllers: () -> [UIViewController]) {
         guard shouldDisplay(version: version) else { return }
         let vcs = controllers()
         guard vcs.count > 0 else { return }
@@ -57,11 +57,11 @@ open class LLGuide {
     ///   - windowLevel: Window 展示优先级
     ///   - controllers: 控制器列表
     /// - Returns: UIWindow 对象
-    static private func windiw(windowLevel: Int, controllers: [UIViewController]) -> UIWindow {
+    static private func windiw(windowLevel: CGFloat, controllers: [UIViewController]) -> UIWindow {
         let containerViewController = LLGuideContainerViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [:])
         containerViewController.pageControllers = controllers
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.windowLevel = UIWindowLevel(windowLevel)
+        window.windowLevel = UIWindow.Level(windowLevel)
         window.rootViewController = containerViewController
         window.isOpaque = false
         /// 互相强引用, 方式 window 被释放

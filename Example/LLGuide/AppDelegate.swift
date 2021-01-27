@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LLGuide.skipTextColor = .systemRed
         
-        LLGuide.config(version: "3") { () -> [UIImage] in
+        LLGuide.config(version: "5") { () -> [UIImage] in
             ["guide_image_01",
              "guide_image_02",
              "guide_image_03",
