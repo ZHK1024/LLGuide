@@ -19,8 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         LLGuide.skipTextColor = .systemRed
-        LLGuide.config { () -> [UIImage] in
-            ["guide_image_01", "guide_image_02", "guide_image_03", "guide_image_04"].compactMap {
+        LLGuide.config(version: "6") { () -> [UIImage] in
+            ["guide_image_01",
+             "guide_image_02",
+             "guide_image_03",
+             "guide_image_04"
+            ].compactMap {
                 UIImage(named: $0)
             }
         }

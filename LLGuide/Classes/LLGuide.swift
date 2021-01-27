@@ -74,12 +74,10 @@ open class LLGuide {
     /// - Parameter version: 版本号
     /// - Returns: 判断结果
     static private func shouldDisplay(version: String?) -> Bool {
-        if version == nil {
-            return true
-        }
-        guard let oldVersion = UserDefaults.standard.value(forKey: kVersionKey) as? String else {
-            return true
-        }
-        return oldVersion != version
+        if version == nil { return true }
+        let result = UserDefaults.standard.value(forKey: kVersionKey) as? String != version
+        UserDefaults.standard.setValue(version, forKey: kVersionKey)
+        UserDefaults.standard.synchronize()
+        return result
     }
 }
