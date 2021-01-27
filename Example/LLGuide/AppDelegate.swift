@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         LLGuide.skipTextColor = .systemRed
-        LLGuide.config(version: "6") { () -> [UIImage] in
+        
+        LLGuide.config(version: "3") { () -> [UIImage] in
             ["guide_image_01",
              "guide_image_02",
              "guide_image_03",
@@ -28,6 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UIImage(named: $0)
             }
         }
+        
+//        LLGuide.config(version: "1") { () -> [UIViewController] in
+//            [UIColor.systemRed,
+//             UIColor.systemGreen,
+//             UIColor.systemBlue,
+//             UIColor.systemTeal
+//            ].map {
+//                GuideViewController(backgroundColor: $0)
+//            }
+//        }
         
         return true
     }

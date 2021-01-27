@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		91735CFE25C1530D00BB37B4 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91735CFD25C1530D00BB37B4 /* GuideViewController.swift */; };
 		A3D5160EC49C8CCC92B65C39 /* Pods_LLGuide_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F27AEB520C18EADB57117C3 /* Pods_LLGuide_Tests.framework */; };
 		BA1F9739F6F788C1CCCDF6B7 /* Pods_LLGuide_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181D3DEF9B851C31D34DE8CC /* Pods_LLGuide_Example.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		6800AA4EA85F92D5D662C84D /* Pods-LLGuide_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLGuide_Example.debug.xcconfig"; path = "Target Support Files/Pods-LLGuide_Example/Pods-LLGuide_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6E4DBBC86E5AC7BE6D2D7044 /* Pods-LLGuide_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLGuide_Example.release.xcconfig"; path = "Target Support Files/Pods-LLGuide_Example/Pods-LLGuide_Example.release.xcconfig"; sourceTree = "<group>"; };
 		760C541195470F48403F53C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		91735CFD25C1530D00BB37B4 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		C873D2D9794BCCB1D2619F99 /* Pods-LLGuide_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLGuide_Tests.release.xcconfig"; path = "Target Support Files/Pods-LLGuide_Tests/Pods-LLGuide_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F5A7386C29E5ECB54CE8BCCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				91735CFD25C1530D00BB37B4 /* GuideViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -333,6 +336,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				91735CFE25C1530D00BB37B4 /* GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
