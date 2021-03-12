@@ -27,7 +27,6 @@ class LLGuideContainerViewController: UIPageViewController {
         button.layer.cornerRadius = LLGuide.skipSize.height / 2
         button.backgroundColor = LLGuide.skipBackgroundColor
         button.setTitleColor(LLGuide.skipTextColor, for: .normal)
-        button.addTarget(self, action: #selector(dismissGudie), for: .touchUpInside)
         return button
     }()
     
@@ -39,6 +38,7 @@ class LLGuideContainerViewController: UIPageViewController {
         button.backgroundColor = .systemBlue
         button.frame = CGRect(x: 0.0, y: 0.0, width: 200.0, height: 50.0)
         button.isHidden = true
+        button.addTarget(self, action: #selector(dismissGudie), for: .touchUpInside)
         return button
     }()
     
