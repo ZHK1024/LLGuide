@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LLGuide.skipTextColor = .systemRed
         
-        LLGuide.config(version: "5") { () -> [UIImage] in
+        LLGuide.guide(version: "\(CFAbsoluteTimeGetCurrent())") { () -> [UIImage] in
             ["guide_image_01",
              "guide_image_02",
              "guide_image_03",
@@ -28,17 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ].compactMap {
                 UIImage(named: $0)
             }
+        } configuration: { (skip, enter, control) in
+            enter?.setTitle("立 即 进 入", for: .normal)
+            enter?.frame = CGRect(x: 0.0, y: 0.0, width: 250, height: 60)
+            enter?.layer.cornerRadius = 30.0
+            enter?.clipsToBounds = true
+            enter?.titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
         }
-        
-//        LLGuide.config(version: "1") { () -> [UIViewController] in
-//            [UIColor.systemRed,
-//             UIColor.systemGreen,
-//             UIColor.systemBlue,
-//             UIColor.systemTeal
-//            ].map {
-//                GuideViewController(backgroundColor: $0)
-//            }
-//        }
         
         return true
     }

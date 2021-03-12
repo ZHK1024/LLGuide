@@ -25,11 +25,15 @@ class LLGuideViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(imageView)
         imageView.contentMode = LLGuide.contentModel
+        imageView.clipsToBounds = true
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        imageView.frame = view.bounds
+        imageView.frame = CGRect(x: LLGuide.contentInsets.left,
+                                 y: LLGuide.contentInsets.top,
+                                 width: view.bounds.width - LLGuide.contentInsets.left - LLGuide.contentInsets.right,
+                                 height: view.bounds.height - LLGuide.contentInsets.top - LLGuide.contentInsets.bottom)
     }
 
     
